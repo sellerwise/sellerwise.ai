@@ -140,13 +140,11 @@
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-=======
 .main-content{
     margin: 2rem 0 4rem 0;s
 }
 
->>>>>>> 47f1a26f3daeaf1a61ecbefd9076caa04a9e0a99
+
 /* Toast styles */
 .toast-overlay {
     position: fixed;
