@@ -1,0 +1,344 @@
+/* Cropping Tool Section Specific Styles */
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.header p {
+    color: #4a5568;
+    font-size: 0.875rem;
+}
+
+.upload-btn,
+.printer-btn,
+.download-btn {
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.upload-btn:hover,
+.printer-btn:hover {
+    background-color: #f9fafb;
+    border-color: #63666c;
+}
+
+.drop-zone {
+    border: 2px dashed #cfcfcf;
+    transition: border-color 0.3s;
+    background-color: #F9FAFC;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.drop-zone:hover {
+    border-color: #63666c;
+}
+
+#upload_box_text {
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #474b57;
+}
+
+.printer-btn {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem; /* Reduced height by adjusting padding */
+    background-color: #fff;
+    display: flex;
+    align-items: center; /* Center text vertically */
+    height: 3rem; /* Reduced height to make buttons more compact */
+    gap: .5rem;
+}
+
+.printer-btn-color {
+    color: #44424F;
+    font-weight: 500;
+    font-size: 0.875rem; /* Slightly smaller text to fit */
+}
+
+.printer-desc {
+    font-size: 0.85rem;
+    color: #989faa;
+}
+
+.pdf-preview {
+    background-color: #F3F4F6;
+    border-radius: 0.5rem;
+    height: 398px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #515255;
+    font-size: 0.875rem;
+    font-size: 1.2em;
+}
+
+.download-btn {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem; /* Reduced height by adjusting padding */
+    background-color: #dfdfdf;
+    color: #44424F;
+    font-weight: 500;
+    font-size: 1rem; /* Slightly smaller text to fit */
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    height: 3rem; /* Reduced height to make button more compact */
+    width: 100%;
+}
+
+.download-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.download-btn:hover {
+    background-color: #dfdfdf;
+    color: #44424F;
+    border: none;
+}
+.btn:active {
+    color: #44424F !important;
+    background-color: #dfdfdf !important;
+    border-color: none !important;
+}
+
+#iframe {
+    border: none;
+    overflow: auto;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.upload_icon {
+    width: 50px;
+}
+
+.printer_icon {
+    width: 20px;
+}
+
+.info-icon {
+    cursor: pointer;
+}
+
+.main-content{
+    margin: 2rem 0 4rem 0;s
+}
+
+/* Toast styles */
+.toast-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    z-index: 1022; /* Slightly lower than the toast (1023) */
+    display: none; /* Hidden by default */
+}
+
+.toast {
+    position: fixed;
+    top: 105px;
+    right: 25px;
+    max-width: 300px;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1023;
+    animation: slideInRight 0.3s ease-in-out forwards,
+        fadeOut 0.5s ease-in-out
+            forwards 3s;
+    transform: translateX(110%);
+}
+
+.toast.toast-success {
+    background: #95eab8;
+}
+
+.toast.toast-success .toast-progress {
+    background-color: #2ecc71;
+}
+
+.toast.toast-danger {
+    background: #efaca5;
+}
+
+.toast.toast-danger .toast-progress {
+    background-color: #e74c3c;
+}
+
+.toast-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toast-icon {
+    padding: 0.35rem 0.5rem;
+    font-size: 1.5rem;
+}
+
+.toast-message {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #000000;
+    padding: 0.5rem;
+}
+
+.toast-progress {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #b7b7b7;
+    animation: toastProgress 3s
+        ease-in-out forwards;
+}
+
+.toast.closing {
+    animation: slideOutRight 0.5s
+        ease-in-out forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(110%);
+    }
+
+    75% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(110%);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes toastProgress {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+/* Loader */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-bottom: 8px solid #3498db;
+    border-right: 8px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 12px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #232630;
+    cursor: pointer;
+}
+
+.modal-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.heading-txt {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.content-txt {
+    font-size: 1.2rem;
+    color: #474b57;
+}
+
+.video-box {
+    background-color: #F3F4F6;
+    border-radius: 0.5rem;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #515255;
+}
+
+.custom_modal_width {
+    min-width: 660px;
+}
+
+.custom_modal_zoom{
+    zoom: 0.8;
+}
