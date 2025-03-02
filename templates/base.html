@@ -43,6 +43,15 @@
     }
 
     /* Center the navbar items */
+    .sticky-top{
+        position: -webkit-sticky;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1020;
+        min-height: 62px;
+    }
+
     .navbar > .container {
         display: flex;
         justify-content: space-between;
@@ -210,6 +219,7 @@
 
     main {
         flex: 2;
+        margin-top: 62px;
     }
 
     /* Additional spacing utilities */
