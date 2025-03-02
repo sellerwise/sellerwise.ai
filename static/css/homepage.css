@@ -1,0 +1,149 @@
+/* Hero section styles */
+.bg-gradient-to-b {
+    background: linear-gradient(200deg, #eff6ff 0%, #ffffff 100%);
+}
+
+/* Card hover effects */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Features section styles */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon styles */
+.fs-3 {
+    font-size: 1.75rem !important;
+}
+
+/* Button icon alignment */
+.btn i {
+    vertical-align: middle;
+}
+
+/* Link hover effects */
+.text-decoration-none:hover {
+    text-decoration: none;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+}
+
+/* How It Works section */
+.border-primary {
+    border-color: #2563eb !important;
+}
+
+.ws_line {
+    top: 19% !important;
+    left: 55% !important;
+    width: 96% !important;
+}
+
+/* Testimonials carousel */
+.carousel-item {
+    padding: 2rem 4rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust the distance from the right */
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center the icon */
+    align-items: center; /* Vertically center the icon */
+    width: 40px; /* Circle size, increased to better fit the icon */
+    height: 40px; /* Circle size, increased to better fit the icon */
+    border-radius: 50%; /* Circle shape */
+    background-color: white; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow */
+    position: relative;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.carousel-control-prev-icon i, .carousel-control-next-icon i {
+    font-size: 20px; /* Adjust the icon size to fit the circle */
+    color: #333; /* Chevron color */
+    font-weight: bolder; /* Make the chevron bold */
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon {
+    transform: scale(1.1); /* Slightly grow the icon on hover (pop-up effect) */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+.carousel-control-next:hover .carousel-control-next-icon {
+    transform: scale(1.1); /* Slightly grow the icon on hover (pop-up effect) */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+/* Pricing section */
+.ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Contact form */
+.form-control:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+
+textarea{
+    resize:none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-item {
+        padding: 2rem;
+    }
+
+    .border-md-end {
+        border-right: none !important;
+    }
+}
+
+/* -----------------*/
+.py-5{
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+
+

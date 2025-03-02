@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/label_cropper.css' %}">
+{% endblock %}
+
+{% block card %}
+
+    <div class="container pt-4 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="mb-4 header text-center">
+                    <h1 class="h2 fw-bold">Crop Your Shipping Labels</h1>
+                    <h2 class="h4 fw-semibold text-primary mb-2">Quickly and Easily</h2>
+                    <p class="text-muted small">Easily crop shipping labels for Amazon, FlipKart, Meesho, and Shiprocket</p>
+                </div>
+                <div class="row g-4 main-content align-items-end">
+                    <div class="col-md-6 upload-section d-flex flex-column h-100">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h3 class="h5 fw-semibold">Upload & Crop</h3>
+                            <div class="d-flex align-items-center gap-2 fs-5 fw-bold info-icon">
+                                <img src="{% static 'icons/label_cropper_icons/icons-info.svg' %}" style="height:15px; cursor:pointer;">
+                                <span class="fw-medium text-muted" style="font-size: 1rem;">Help</span>
+                            </div>
+                        </div>
+                        <div id="dropZone" class="drop-zone rounded p-3 text-center mb-4 flex-grow-1">
+                            <img src="{% static 'icons/label_cropper_icons/upload.svg' %}" class="upload_icon mb-2">
+                            <h6 class="fw-bold mb-1">Upload your PDF</h6>
+                            <span id="upload_box_text">Drag and drop your shipping label PDF here, or click to browse</span>
+                            <input type="file" name="pdf_file[]" id="pdf_file" accept="application/pdf" required class="hidden" multiple style="display:none;">
+                        </div>
+                        <div class="printer-selection mb-4 flex-grow-1">
+                            <h3 class="h5 fw-semibold mb-3">Select Printer</h3>
+                            <div class="row row-cols-2 g-3 printer-buttons">
+                                <div class="col">
+                                    <button id="inkjetPrinter" class="printer-btn btn btn-outline-dark w-100 text-center p-2 rounded">
+                                        <img src="{% static 'icons/label_cropper_icons/printer.svg' %}" class="printer_icon me-1">
+                                        <div class="d-flex flex-column align-items-center">
+                                            <div class="printer-btn-color fw-semibold">Inkjet Printer</div>
+                                            <div class="printer-desc text-muted small">A4 size</div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button id="thermalPrinter" class="printer-btn btn btn-outline-dark w-100 text-center p-2 rounded">
+                                        <img src="{% static 'icons/label_cropper_icons/printer.svg' %}" class="printer_icon me-1">
+                                        <div class="d-flex flex-column align-items-center">
+                                            <div class="printer-btn-color fw-semibold">Thermal Printer</div>
+                                            <div class="printer-desc text-muted small">6 x 4 inches</div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="download-buttons mb-0">
+                            <h3 class="h5 fw-semibold mb-3">Download Files</h3>
+                            <a href="javascript:void(0)" id="downloadSingle" class="download-btn btn btn-outline-dark w-100 text-center p-2 rounded d-flex align-items-center justify-content-center gap-2" download>
+                                <img src="{% static 'icons/label_cropper_icons/download.svg' %}" class="me-1 icon-color">
+                                <span class="download-btn-color fw-semibold">Download PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 preview-section">
+                        <div class="d-flex align-items-center gap-2 mb-3 preview">
+                            <img src="{% static 'icons/label_cropper_icons/eye.svg' %}" style="padding-bottom: 6px;">
+                            <h3 class="h5 fw-semibold">Preview</h3>
+                        </div>
+                        <div class="pdf-preview rounded position-relative" style="height: 417px;">
+                            <span id="pdfPreview" class="position-absolute top-50 start-50 translate-middle text-muted small">PDF preview will appear here</span>
+                            <iframe id="iframe" class="w-100 h-100"></iframe>
+                            <div class="loader position-absolute top-50 start-50 translate-middle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-md custom_modal_width custom_modal_zoom">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="productModalLabel">How Our Shipping Label Cropping Tool Works</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body pt-1">
+                    <div class="video-box mb-4">
+                        <p class="content-txt">Video Demo Placeholder</p>
+                    </div>
+                    <section class="mb-3">
+                        <h6 class="heading-txt">How to Use the Tool:</h6>
+                        <ol class="content-txt">
+                            <li>Upload Your Label PDF</li>
+                            <li>Select Label Format (4x6 for Thermal, A4/Letter for Inkjet)</li>
+                            <li>Preview the Labels</li>
+                            <li>Download the Processed PDF</li>
+                            <li>Print the Labels</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h6 class="heading-txt">Key Benefits:</h6>
+                        <ul class="content-txt">
+                            <li>Compatible with Amazon, Flipkart, Meesho and Shiprocket</li>
+                            <li>Support both inkjet and thermal printers</li>
+                            <li>Instant label formatting</li>
+                            <li>Easy-to-use interface</li>
+                        </ul>
+                    </section>
+                    <button type="button" class="modal-btn btn btn-primary w-100 mt-3" data-bs-dismiss="modal">Try the Tool Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block jsbody %}
+
+<script src="{% static 'js/label_cropper.js' %}"></script>
+
+{% endblock %}

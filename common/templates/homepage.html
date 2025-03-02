@@ -1,0 +1,426 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+{% endblock %}
+
+{% block card %}
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-blue-50 to-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-4">Simplify Your E-commerce Journey</h1>
+                    <p class="lead text-muted mb-5">Powerful tools to optimize, analyze, and grow your online business effortlessly.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="javascript:void()" class="btn btn-primary btn-lg d-inline-flex align-items-center">
+                            Get Started Free
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#features" class="btn btn-outline-primary btn-lg">See How It Works</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="card h-100 border-0 shadow-sm hover-card">
+                                <div class="card-body">
+                                    <i class="bi bi-crop text-primary fs-3 mb-3"></i>
+                                    <h3 class="h5 mb-2">Cropping Tool</h3>
+                                    <p class="text-muted small mb-0">Quick and precise label cropping</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card h-100 border-0 shadow-sm hover-card">
+                                <div class="card-body">
+                                    <i class="bi bi-upc-scan text-primary fs-3 mb-3"></i>
+                                    <h3 class="h5 mb-2">Barcode Tool</h3>
+                                    <p class="text-muted small mb-0">Generate barcodes instantly</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card h-100 border-0 shadow-sm hover-card">
+                                <div class="card-body">
+                                    <i class="bi bi-bar-chart text-primary fs-3 mb-3"></i>
+                                    <h3 class="h5 mb-2">Analytics</h3>
+                                    <p class="text-muted small mb-0">Track your performance</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card h-100 border-0 shadow-sm hover-card">
+                                <div class="card-body">
+                                    <i class="bi bi-clipboard-data text-primary fs-3 mb-3"></i>
+                                    <h3 class="h5 mb-2">Optimization</h3>
+                                    <p class="text-muted small mb-0">Improve your listings</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Core Features</h2>
+                <p class="lead text-muted">Everything you need to succeed in e-commerce</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-crop text-primary fs-3 mb-3"></i>
+                            <h3 class="h4 mb-3">Cropping Tool</h3>
+                            <p class="text-muted mb-4">Quickly crop shipping labels for Amazon, Flipkart, Meesho, and Shiprocket.</p>
+                            <a href="/cropping-label/" class="text-primary fw-semibold text-decoration-none d-inline-flex align-items-center">
+                                Try Now
+                                <i class="bi bi-chevron-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-upc-scan text-primary fs-3 mb-3"></i>
+                            <h3 class="h4 mb-3">Barcode Generator</h3>
+                            <p class="text-muted mb-4">Generate barcodes effortlessly for your product listings.</p>
+                            <a href="javascript:void()" class="text-primary fw-semibold text-decoration-none d-inline-flex align-items-center">
+                                Try Now
+                                <i class="bi bi-chevron-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-calculator text-primary fs-3 mb-3"></i>
+                            <h3 class="h4 mb-3">Profit Calculator</h3>
+                            <p class="text-muted mb-4">Calculate profits after fees, taxes, and other deductions.</p>
+                            <a href="javascript:void()" class="text-primary fw-semibold text-decoration-none d-inline-flex align-items-center">
+                                Try Now
+                                <i class="bi bi-chevron-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-bar-chart text-primary fs-3 mb-3"></i>
+                            <h3 class="h4 mb-3">Listing Analysis</h3>
+                            <p class="text-muted mb-4">Get detailed insights into your product listings.</p>
+                            <a href="javascript:void()" class="text-primary fw-semibold text-decoration-none d-inline-flex align-items-center">
+                                Try Now
+                                <i class="bi bi-chevron-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-search text-primary fs-3 mb-3"></i>
+                            <h3 class="h4 mb-3">Listing Optimization</h3>
+                            <p class="text-muted mb-4">Improve your listings using actionable SEO recommendations.</p>
+                            <a href="javascript:void()" class="text-primary fw-semibold text-decoration-none d-inline-flex align-items-center">
+                                Try Now
+                                <i class="bi bi-chevron-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">How It Works in 3 Easy Steps</h2>
+            </div>
+            <div class="row position-relative">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <div class="position-relative">
+                        <div class="d-flex justify-content-center text-primary mb-4">
+                            <i class="bi bi-upload fs-1"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Upload Your Data</h3>
+                        <p class="text-muted">Drag and drop shipping labels or input data.</p>
+                        <div class="position-absolute d-none d-md-block ws_line translate-middle-y border-top border-primary"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <div class="position-relative">
+                        <div class="d-flex justify-content-center text-primary mb-4">
+                            <i class="bi bi-tools fs-1"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Choose Your Tool</h3>
+                        <p class="text-muted">Select from cropping, barcode, analysis, or optimization.</p>
+                        <div class="position-absolute d-none d-md-block ws_line translate-middle-y border-top border-primary"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="d-flex justify-content-center text-primary mb-4">
+                        <i class="bi bi-download fs-1"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Download & Grow</h3>
+                    <p class="text-muted">Get results and boost your sales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">What Our Users Say</h2>
+            </div>
+            <div class="position-relative">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="text-center px-4">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&h=128&q=80"
+                                     class="rounded-circle mb-4" alt="Sarah Johnson" style="width: 80px; height: 80px; object-fit: cover;">
+                                <p class="lead fst-italic mb-4">"This tool has revolutionized how I manage my e-commerce business. The time savings are incredible!"</p>
+                                <h4 class="fw-bold mb-1">Sarah Johnson</h4>
+                                <p class="text-muted">Amazon Seller</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-center px-4">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&h=128&q=80"
+                                     class="rounded-circle mb-4" alt="Michael Chen" style="width: 80px; height: 80px; object-fit: cover;">
+                                <p class="lead fst-italic mb-4">"The analytics features helped me optimize my listings and increase sales by 40%."</p>
+                                <h4 class="fw-bold mb-1">Michael Chen</h4>
+                                <p class="text-muted">E-commerce Entrepreneur</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-center px-4">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&h=128&q=80"
+                                     class="rounded-circle mb-4" alt="Emma Williams" style="width: 80px; height: 80px; object-fit: cover;">
+                                <p class="lead fst-italic mb-4">"Best investment I've made for my online business. Customer support is exceptional!"</p>
+                                <h4 class="fw-bold mb-1">Emma Williams</h4>
+                                <p class="text-muted">Flipkart Seller</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true">
+                            <i class="bi bi-chevron-left"></i>
+                        </span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true">
+                            <i class="bi bi-chevron-right"></i> <!-- Chevron Icon from Bootstrap Icons -->
+                        </span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Simple Pricing for Every Seller</h2>
+                <p class="lead text-muted">Choose the perfect plan for your business</p>
+            </div>
+            <div class="row g-4">
+                <!-- Free Plan -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-5">
+                            <h3 class="h2 mb-4">Free</h3>
+                            <div class="mb-4">
+                                <span class="display-4 fw-bold">₹0</span>
+                                <span class="text-muted">/month</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Basic cropping tool
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Simple barcode generator
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Basic profit calculator
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Community support
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    1 user
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    One time
+                                </li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pro Plan -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card border-primary">
+                        <div class="card-body p-5">
+                            <div class="ribbon bg-primary text-white text-center py-1 mb-4">Most Popular</div>
+                            <h3 class="h2 mb-4">Pro</h3>
+                            <div class="mb-4">
+                                <span class="display-4 fw-bold">₹99</span>
+                                <span class="text-muted">/month</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Advanced cropping tools
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Bulk barcode generation
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Advanced profit calculator
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Listing analysis
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Priority support
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Up to 5 users
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary w-100">Start Pro Trial</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-5">
+                            <h3 class="h2 mb-4">Enterprise</h3>
+                            <div class="mb-4">
+                                <span class="display-4 fw-bold">Custom</span>
+                            </div>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    All Pro features
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Custom solutions
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    API access
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Dedicated support
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Unlimited users
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="bi bi-check2 text-primary me-2"></i>
+                                    Custom integrations
+                                </li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Need Help? Get in Touch!</h2>
+                <p class="lead text-muted">We're here to help you succeed</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="2" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex mb-5 mt-1">
+                        <i class="bi bi-envelope text-primary fs-4 me-3"></i>
+                        <div>
+                            <h3 class="h5 mb-1">Email</h3>
+                            <p class="text-muted mb-0">support@sellerwise.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-5 mt-1">
+                        <i class="bi bi-telephone text-primary fs-4 me-3"></i>
+                        <div>
+                            <h3 class="h5 mb-1">Phone</h3>
+                            <p class="text-muted mb-0">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <i class="bi bi-geo-alt text-primary fs-4 me-3"></i>
+                        <div>
+                            <h3 class="h5 mb-1">Location</h3>
+                            <p class="text-muted mb-0">
+                                123 E-commerce Street<br>
+                                San Francisco, CA 94105
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block jsbody %}
+{% endblock %}
