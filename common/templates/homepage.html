@@ -374,18 +374,19 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6">
-                    <form class="needs-validation" novalidate>
+                    <form id="contact-form" class="needs-validation" method="POST" action="https://api.web3forms.com/submit">
+                        <input type="hidden" name="access_key" value="abd5f8dd-b0a0-4230-a56c-3772a1ef270c">
                         <div class="mb-4">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
+                            <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                         <div class="mb-4">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="mb-4">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="2" required></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Send Message</button>
                     </form>

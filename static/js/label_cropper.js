@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function ()
         $("#iframe").css('display', 'none');
         $("#downloadSingle").css('background-color', "#dfdfdf")
         $(".download-btn-color").css('color', "#000000" );
-        $(".icon-color").attr('src', "/static/icons/download.svg" );
+        $(".icon-color").attr('src', "/static/icons/label_cropper_icon/download.svg" );
         $("#thermalPrinter").removeClass('btn-color');
         $("#inkjetPrinter").removeClass('btn-color');
         fileInput.click();
@@ -99,7 +99,7 @@ function main_function(printer_type)
     upload_data.append('csrfmiddlewaretoken', $('input[name="csrfmiddlewaretoken"]').val());
 
     $.ajax({
-        url: '/cropping_tool/',
+        url: '/cropping-label/',
         type: 'POST',
         data: upload_data,
         processData: false,
@@ -121,7 +121,7 @@ function main_function(printer_type)
                 $("#downloadSingle").attr('href', data.download_url);
                 $("#downloadSingle").css('background-color', "#1BA64B" );
                 $(".download-btn-color").css('color', "#FFFFFF" );
-                $(".icon-color").attr('src', "/static/icons/download-white.svg" );
+                $(".icon-color").attr('src', "/static/icons/label_cropper_icon/download-white.svg" );
                 showToast(data.msg, "success", 5000);
             }
         },
@@ -133,54 +133,6 @@ function main_function(printer_type)
 }
 
 //+++++++++++++++++++++++++++++AJAX AND URL JS END++++++++++++++++++++++++++++++++++++
-
-//+++++++++++++++++++++++++++++TOAST JS START++++++++++++++++++++++++++++++++++++
-
-//let icon = {
-//    success:
-//    '<span class="material-symbols-outlined">task_alt</span>',
-//    danger:
-//    '<span class="material-symbols-outlined">error</span>',
-//};
-
-let icon = {
-    success:
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="black" stroke-width="2" stroke-dasharray="95 1000" transform="rotate(-45 12 12)"/><path d="M7 12l4 4 7-8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-    danger:
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="20" height="20"><circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="none"/><path d="M12 8v4M12 16h.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-};
-
-const showToast = (message = "Sample Message", toastType = "info", duration = 5000) =>
-{
-    if (!Object.keys(icon).includes(toastType))
-        toastType = "info";
-
-    let box = $('<div></div>')
-        .addClass('toast')
-        .addClass('show')
-        .addClass(`toast-${toastType}`)
-        .html(`
-            <div class="toast-content-wrapper">
-                <div class="toast-icon">
-                    ${icon[toastType]}
-                </div>
-                <div class="toast-message">${message}</div>
-                <div class="toast-progress"></div>
-            </div>
-        `);
-
-    duration = duration || 5000;
-    box.find(".toast-progress").css('animation-duration', `${duration / 1000}s`);
-
-    let toastAlready = $("body").find(".toast");
-    if (toastAlready.length) {
-        toastAlready.remove();
-    }
-
-    $("body").append(box);
-};
-
-//+++++++++++++++++++++++++++++TOAST JS END++++++++++++++++++++++++++++++++++++
 
 //+++++++++++++++++++++++++++++PDF PREVIEW JS START++++++++++++++++++++++++++++++++++++
 //+++++++++++++++++++++++++++++PDF PREVIEW JS END++++++++++++++++++++++++++++++++++++
